@@ -41,7 +41,7 @@ div#header{
 div#content{
 	width: 400px;
 	height:500px;
-	background: url("../images/bg.png") 20px 20px fixed;
+	background: url("../images/bg.png");
 	position: relative;
 	border-radius: 0 0 50% 50%;
 }
