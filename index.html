@@ -1,72 +1,205 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>IUH</title>
-    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
-    <link rel="stylesheet" href="css/index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.6, minimum-scale=0.6, maximum-scale=0.6, user-scalable=no" />
+    <title>卓爸爸的主页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/konva.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/shake.css">
+    <link rel="stylesheet" href="css/newfonts/style.css">
+    <link rel="stylesheet" href="css/weatherFont/style.css">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
 </head>
 
 <body>
-    <div id="face">
-        <div id="header"></div>
-        <div id="earl"></div>
-        <div id="earr"></div>
-        <div id="content">
-            <div id="mouth">
-                <audio src="./images/Survivor.mp3" id="music"></audio>
+    <section id="all">
+        <section id="topBar">
+            <div id="navBar">
+                <div class="hello">
+                    <span class="shake-slow">hello world</span>
+                    <br>
+                    <span class="shake-little">来路无可眷恋</span>
+                    <br>
+                    <span class="shake">值得期待的只有远方</span>
+                </div>
+                <div id="mainvia">
+                    <div id="vias">
+                        <div id="via"></div>
+                        <img src="images/me.png" alt="" id="viaImg">
+                    </div>
+                </div>
+                <span id="morecases">
+                    <i class="glyphicon glyphicon-hand-down"></i>
+                </span>
+                <span class="water1"></span>
+                <span class="water2"></span>
             </div>
-            <div id="eyel">
-                <!-- <img src="./images/tp.jpg" alt="" /> -->
+        </section>
+        <section id="middle">
+            <div id="topabout">
+                <span class="aboutsmore"> <i class="icon-brand40 shake"></i>Cases</span>
+                <br>
+                <div class="flex">
+                    <span class="abouts"><i class="icon-brand14 shake"></i>攻城狮</span>
+                    <span class="abouts"><i class="icon-brand19 shake"></i>程序媛</span>
+                    <span class="abouts"><i class="icon-brand13 shake"></i>技术宅</span>
+                </div>
             </div>
-            <span id="links"></span>
-            <div id="eyer">
-                <!-- <img src="./images/tp.jpg" alt="" /> -->
+            <section id="mycases">
+                <div class="biu">
+                    <div class="biu1">
+                        <div class="cards">
+                            <div class="card"><i class="icon-brand7"></i> <span>天气预报</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>音乐播放器</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>画布小人</span> </div>
+                            <!-- <div class="card"> <i class="icon-brand7"></i><span>case4</span> </div>
+                            <div class="card"><i class="icon-brand7"></i> <span>case5</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>case6</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>case7</span> </div>
+                            <div class="card"><i class="icon-brand7"></i> <span>case8</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>case9</span> </div>
+                            <div class="card"> <i class="icon-brand7"></i><span>case10</span> </div> -->
+                        </div>
+                    </div>
+                    <div class="biu2">
+                        <div class="amaz fire">
+                            <div id="myweather">
+                                <div class="tianqi">
+                                    <select name="" id="city">
+                                        <option value="101010100">北京</option>
+                                        <option value="101210101">杭州</option>
+                                        <option value="101240501">宜春</option>
+                                        <option value="101240701">赣州</option>
+                                        <option value="101280101">广州</option>
+                                        <option value="101020100">上海</option>
+                                    </select>
+                                    <button id="search">查询未来五天天气</button>
+                                    <div id="show">
+                                        <ul id="weather"></ul>
+                                    </div>
+                                    <span id="dayw"></span>
+                                    <span id="nightw"></span>
+                                </div>
+                                <div class="fivedays">
+                                    <p>未来五天天气:</p>
+                                    <ul id="five"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="amaz">
+                            <div id="musicplayer">
+                                <div id="aaa">
+                                    <audio src="./music/Be With you.mp3" id="music"></audio>
+                                </div>
+                                <div id="controller">
+                                    <div id="paly">
+                                        <a href="javascript:;" id="play_pause_btn">
+                <img src="music/tp.jpg" alt=""></a>
+                                    </div>
+                                    <div id="meg">
+                                        <span id="music_name"></span>
+                                        <span id="music_time"></span>
+                                    </div>
+                                    <div id="progresscontrol">
+                                        <progress id="music_progress" value="0" max="100"></progress>
+                                        <span id="voice_tb">Vol:50%</span>
+                                        <progress id="voice" value="50" max="100"></progress>
+                                    </div>
+                                </div>
+                                <div class="songs">
+                                    <span class="song">Be With you</span>
+                                    <span class="song">Beauty</span>
+                                    <span class="song">The Party Troll</span>
+                                    <span class="song">Reign</span>
+                                    <span class="song">Time</span>
+                                    <span class="song">Survivor</span>
+                                </div>
+                                <div class="tusiji">
+                                    <img src="music/dou.gif" alt="">
+                                    <img src="music/dou.gif" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="amaz">
+                            <div class="xiaobing">
+                     <button data-target="up">上</button>
+                    <button data-target="down">下</button>
+                    <button data-target="left">左</button>
+                    <button data-target="right">右</button>
+                    <canvas id="donghua" width="600" height="400" ></canvas>
+                    </div>
+                        </div>
+                       <!--  <div class="amaz">4</div>
+                        <div class="amaz">5</div>
+                        <div class="amaz">6</div>
+                        <div class="amaz">7</div>
+                        <div class="amaz">8</div>
+                        <div class="amaz">9</div>
+                        <div class="amaz">10</div> -->
+                    </div>
+                </div>
+                </div>
+                <div class="spanss taccenter">
+                    <!-- <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span> -->
+                    <span class="leftshow" id="prevPage"><i class="icon-brand18 shake"></i></span>
+                    <span class="leftshow" id="random"><i class="icon-brand40"></i></span>
+                    <span class="leftshow" id="nextPage"><i class="icon-brand18 shake"></i></span>
+                    <!-- <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
+                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>   -->
+                </div>
+            </section>
+        </section>
+        <section id="middleDown">
+        </section>
+        <section id="bottom" class="taccenter">
+            <span class="ancle">其他</span>
+            <span class="personal"> 卓胜辉  ©IUH_VIC  2017-9-27</span>
+        </section>
+        <section id="intouch">
+            <div id="mine">
+                <span id="showbtn">Me</span>
+                <span class="metext">联系我</span>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
             </div>
-        </div>
-    </div>
-    <div id="text">
-    <span id="me">
-        我见过的最不求上进的人
-        <br /> 既不是学霸又不全算学渣
-        <br /> 课听的迷迷糊糊
-        <br /> 作业做一些抄一些
-        <br /> 想逃课又心存顾忌
-        <br /> 行为也不公开对抗规范纪律
-        <br /> 为现状焦虑
-        <br /> 又没有毅力践行决心去改变自己
-        <br /> 三分钟热度
-        <br /> 时常憎恶自己的不争气
-        <br /> 坚持最多的事情就是坚持不下去
-        <br /> 对感情抱有渴望
-        <br /> 又疲于用心追寻与经营
-        <br /> 对曾经的珍视点到即止
-        <br /> 直到渐渐松手
-        <br />淡漠又疏离
-        <br />尚未拥有百毒不侵的内心
-        <br /> 却提前丧失了热泪盈眶的能力
-        <br /> 偶尔闲暇时间想约人一起
-        <br /> 更多时候无人可约就一个人且趴且趟窝上一天
-        <br /> 本想在有限的生命里体验很多种生活
-        <br /> 却只会把同样的日子机械重复很多年
-        <br /> 刷着手机想窥见别人的生活寻求激励
-        <br /> 终日混迹社交网络
-        <br /> 脸色蜡黄地对着手机和电脑的冷光屏
-        <br /> 可以说上几句话的人却寥寥无几
-        <br /> 不曾经历过真正沧桑
-        <br /> 却还失守了最后一点少年意气
-        <br /> 以最普通的身份埋没在人群中
-        <br /> 却过着最最煎熬的日子
-    </span>
-    </div>
-    <div id="footer">
-        <div id="ball">
-        </div>
-    </div>
-    <div id="line"></div>
+            <div id="me">
+                <div class="five active" id="tele">
+                    <span class="meT">
+                        <i class="icon-brand"></i>
+                    </span>
+                    <span class="me">卓胜辉</span>
+                    <span class="tel"> <i class="icon-brand43"></i></span>
+                    <span class="telNum">15558175716</span>
+                    <span class="email"><i class="icon-brand24"></i></span>
+                    <span class="emailAdr">1483291908@qq.com</span>
+                    <span class="csdn"><i class="icon-brand10"></i></span>
+                    <span>  CSDN : IUH_VIC</span>
+                </div>
+                <div class="five "><img src="images/qq.jpg" alt=""></div>
+                <div class="five"><img src="images/weixin.png" alt=""></div>
+                <div class="five"><img src="images/weibo.png" alt=""></div>
+                <div class="five "><img src="images/wangyiyun.jpg" alt=""></div>
+            </div>
+        </section>
+    </section>
+    <span id="backToTop">返回顶部</span>
 </body>
-
+<script src="js/weather.js"></script>
+<script src="js/donghua.js"></script>
 </html>
