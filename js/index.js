@@ -61,7 +61,7 @@ window.onload = function() {
     // 点击到下一层
     $("span#morecases").click(function() {
         var thatTop = parseInt($('#topBar').css('height'));
-        moveTo(0, thatTop);
+        moveTo(0, thatTop+10);
 
     });
     function diandian(){
@@ -133,108 +133,7 @@ window.onload = function() {
 
     // 
 
-    //middle部分的case宽高比
-    // var middle = document.getElementById('middle');
-    // middle.style.height=middle.offsetWidth/2+"px";
-
-    //
-var bius = document.getElementsByClassName('biu');
-// console.log(bius);
-    for(var i = 0;i<bius.length ;i++){
-        bius[i].onclick=function(event){
-            var deg = 0;
-            var that =this;
-            // console.log(that.children[1]);
-            // console.log(that.children[0]);
-            // console.log(that.children[1]);
-            var trans =setInterval(function(){
-                deg+=10;
-                that.style.transform="rotateY("+deg+"deg)";
-                that.children[1].style.transform="rotateY("+deg+"deg)";
-                that.children[0].style.transform="rotateY("+deg+"deg)";
-                if(deg===90){
-                    if(that.children[0].style.display==='none'){
-                    that.children[1].style.display='none';
-                    that.children[0].style.display='block';
-                    }else{      
-                    that.children[0].style.display='none';
-                    that.children[1].style.display='block';
-                    }   
-                }
-                if(deg===180){
-                    clearInterval(trans);
-                }
-            },50)
-        
-        }
-    }
-     
-    // $('#random').click(function(){
-    //     var num =Math.floor((Math.random()*10));
-    //     $('.amaz').each(function(){
-    //             $(this).fadeOut();
-    //          })
-    //     $($('.amaz')[num]).fadeIn();
-    // })
-
-    // $("#prevPage").click(function(){
-    //     var fire =0;
-    //    $('.amaz').each(function(index){
-    //     if($(this).css('display')==='block'){
-    //         fire=index;
-    //     }
-    //         $(this).fadeOut();
-    //     })
-    //    if(fire<0){
-    //      fire=3;
-    //    }
-    //     $($('.amaz')[fire-1]).fadeIn();
-    // });
-    // $("#nextPage").click(function(){
-    //     var fire =0;
-    //    $('.amaz').each(function(index){
-    //     if($(this).css('display')==='block'){
-    //         fire=index;
-    //     }
-    //         $(this).fadeOut();
-    //     })
-    //    if(fire>2){
-    //      fire=-1;
-    //    }
-    //     $($('.amaz')[fire+1]).fadeIn();
-    // });
-    
-
-
-    $('.card').each(function(index){
-        $(this).click(function(){
-        $('.amaz').each(function(){
-                $(this).fadeOut();
-             })
-        $($('.amaz')[index]).fadeIn();
-    })
-    })
-
-
-
-
-    //
-
-
-    //调整span的位置
-    var fonts = document.getElementsByClassName('subject');
-    var cases = document.getElementsByClassName('case');
-    // for(var i = 0; i<cases.length;i++){
-    //     cases[i].onmouseover=function(){
-    //         var spanWidth=this.getElementsByClassName('subject')[0].offsetWidth;
-    //         var spanHeight=this.getElementsByClassName('subject')[0].offsetHeight;
-    //         this.getElementsByClassName('subject')[0].style.marginLeft=-spanWidth/2+'px';
-    //         this.getElementsByClassName('subject')[0].style.marginTop=-spanHeight/2+'px';
-    //         this.getElementsByClassName('subject')[0].style.left='50%';
-    //         this.getElementsByClassName('subject')[0].style.top='50%';
-    //     }
-
-    // }
+   
 
     // 联系栏
 

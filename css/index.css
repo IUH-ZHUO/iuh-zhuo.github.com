@@ -172,18 +172,19 @@ div#vias img{
 /*-------------------------*/
 section#middleDown{
     width: 100%;
-    height: 400px;
+    height: 100px;
     background-color: transparent;
 }
-/*-------------------------*/
+/*-------------------------
 
 
 /*-----------------------------------底部栏---------------------------*/
-section#bottom {
+section#bottom{
     height: 150px;
     /*background-color: #102139;*/
-    background-color:transparent;
+    background-color:   #484848;
     opacity: 0.5;
+    /*opacity: 0.9;*/
     color: white;
     font-family: '思源黑体';
 }
@@ -206,7 +207,7 @@ section#intouch {
     height: 400px;
     position: absolute;
     right: 0;
-    top: 150px;
+    top: 200px;
     overflow: hidden;
     font-family: 'segoe ui';
     z-index: 12;
@@ -280,12 +281,11 @@ div#me {
     left: 50px;
     top: 0;
     text-align: center;
-
 }
 
 div#me>div img {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -293,7 +293,7 @@ div#me>div.five {
     width: 300px;
     height: 90%;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px;
     color: white;
     display: none;
     text-align: left;
@@ -333,7 +333,7 @@ div#me>div.active {
 
 section#middle {
     width: 100%;
-    height:780px;
+    height:820px;
     background-color: transparent;
     position: relative;
 }
@@ -361,383 +361,45 @@ section#middle div#topabout span.aboutsmore{
 
 section#middle section#mycases{
     width: 100%;
-    height: 600px;
-    background-color: skyblue;
-    opacity: 0.95;
+    height: 720px;
+    background-color: white;
+    /*background: url('../images/66.jpg')center center no-repeat ;*/
+    position: relative;
+    /*opacity: 0.5;*/
 }
-section#middle section#mycases div.biu{
-        width:100%;
-        height:600px;
-        position: relative;
-    }
-    div.biu1{
-        width:100%;
-        height:600px;
-        background-color:lightseagreen;
-        position: absolute;
-        left: 0;
-        top: 0;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    section#middle div.spanss{
-        width: 100%;
-        height: 80px;
-        line-height: 80px;
-        font-size: 30px;
-        background-color: #222;
-        opacity: 0.5;
-        cursor: pointer;
-    }
-
-    div.biu div.cards{
-        width: 100%;
-        overflow: hidden;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        position: relative;
-    }
-    div.biu1 div.card{
-        display: inline-block;
-        background-color:#222;
-        opacity: 0.5;
-        width: 18%;
-        height: 45%;
-        text-align: center;
-        position:relative;
-        border-bottom: 10px transparent;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    div.biu1 i{
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        font-size: 100px;
-        line-height: 250px;
-        z-index: 1;
-    }
-    div.biu1 div.card img{
-        width: 100%;
-        height: 100%;     
-    }
-    div.biu1 div.card span{
-        font-size: 20px;
-        color: white;
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        margin-left: -40px;
-    }
-    div.biu1 div.card:hover span{
-        color:darkcyan;
-    }
-    div.spanss span.leftshow{
-        display: inline-block;
-        width: 100px;
-        line-height: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    div.biu2{
-        width:100%;
-        height:600px;
-        background: url('../images/13.jpg')center center ;
-        background-attachment: cover;
-        /*background-color: transparent;*/
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: none;
-        overflow: hidden;
-    }
-    div.biu2 div.amaz{
-        width: 100%;
-        height: 600px;
-        /*background-color:white;*/
-        background: url('../images/12.jpg')bottom center no-repeat ;
-        padding:50px 100px;
-        background-clip: content-box;
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: none;
-
-    }
-    div.biu2 div.fire{
-        display: block;
-    }
-section#middle div.case {
-    width: 80%;
-    margin-left: 10%;
-    height:600px;
-    background-color: #555;
-    opacity: 0.5;
+section#middle section#mycases section.case1{
+    width: 100%;
+    height: 420px;
+    background-color:   rgba(255 ,140, 0 ,0.8);
+    position: relative;
 }
-
-
-
-/*-------------------------middle-------------------------*/
-/*-------------------------case1:天气-----------------*/
+section#middle section#mycases section.case1 section.intro{
+   height: 420px;
+   width: 300px;
+   background-color:#40E0D0 ;
+}
+section#middle section#mycases section.case1 section#zshMusic{
+    /*display: inline-block;*/
+    width: 450px;
+    position: absolute;
+    right: 10px;
+}
+section#middle section#mycases section.case2{
+    width: 100%;
+    height: 300px;
+    background-color:teal;
+    /*background: url('../images/777.jpg')bottom center no-repeat ;*/
+    position: relative;
     
-    @font-face {
-    font-family: "weatherFont";
-    src: url('weatherFont/fonts/fonts/weatherFont.eot') format("embedded-opentype"),
-    url('weatherFont/fonts/fonts/weatherFont.svg') format("svg"),
-    url('weatherFont/fonts/fonts/weatherFont.ttf') format("true-type"),
-    url('weatherFont/fonts/fonts/weatherFont.woff') format("woff");
+}
+section#middle section#mycases section.case2 section.intro2{
+   height: 300px;
+   width: 300px;
+   background-color: lightgrey;
+   position: absolute;
+   right: 0;
+   top: 0;
 }
 
-    [class^="weather-"],
-    [class*="weather-"] {
-        font-family: "weatherFont";
-        font-style: normal;
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        color: white;
-    }
-    span.backHome{
-        width: 50px;
-        height: 50px;
-        font-size: 25px;
-        /*color: red;*/
-        cursor: pointer;
-    }
-    div#myweather{
-        width: 900px;
-        height: 250px;
-        margin: 100px auto;
-    }
-
-    div.tianqi,
-    div.fivedays{
-        width: 250px;
-        height: 250px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: lightcyan;
-        border-radius: 20px;
-        float: left;
-        position: relative;
-        /*border:1px dashed lightseagreen;*/
-    }
-    div#myweather div#show ul li.tem{
-        font-size: 36px;
-        color: white;
-    }
-
-    div#myweather div.fivedays{
-        width: 550px;
-        text-align: center;
-        float: left;
-        margin-left: 1px;
-        display: none;
-    }
-
-    div#myweather div.fivedays ul li {
-        float: left;
-        width: 120px;
-        height: 40px;
-    }
 
 
-    ul{
-        list-style: none;
-    }
-
-    div#myweather select {
-        background-color: transparent;
-        border: 0px;
-        outline: none;
-    }
-
-    div#myweather option {
-        background-color: lightcyan;
-    }
-
-    div#myweather button {
-        background-color: transparent;
-        outline: none;
-        padding: 5px;
-        border: 1px solid white;
-        margin-left: 20px;
-        border-radius: 10px;
-    }
-
-    div#myweather span#dayw,
-    span#nightw{
-        width: 50px;
-        height: 50px;
-        font-size: 60px;
-        color: white;
-        position: absolute;
-        top: 50px;
-        right: 30px;
-        animation: cloudmove 10s infinite ease-in-out alternate;
-    }
-    div#myweather span#nightw{
-        top: 120px ;
-        animation: cloudmove 10s  infinite 5s ease-in-out alternate;
-    }
-    @keyframes cloudmove{
-       from{right: 30px;}
-       to{right: 100px;}
-    }
-
-
-
-  /*---------------------------播放器-------------------------------------*/
-
-
-    div#controller {
-        width: 800px;
-        height: 80px;
-        position: relative;
-        font-family: "segoe script";
-        background: linear-gradient(to right bottom, darkcyan, lightseagreen);
-        border-radius: 5px 5px 0 0;
-    }
-    /*          点击暂停开始    */
-
-    a#play_pause_btn {
-        width: 64px;
-        height: 64px;
-        position: absolute;
-        left: 10px;
-        top: 8px;
-        display: inline-block;
-    }
-
-    a#play_pause_btn img {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-    }
-    /*      显示时间    */
-
-    span#music_time {
-        position: absolute;
-        right: 310px;
-        top: 10px;
-    }
-
-    span#music_name {
-        position: absolute;
-        left: 90px;
-        top: 10px;
-    }
-    /*      音乐进度   */
-
-    progress#music_progress {
-        width: 400px;
-        height: 5px;
-        -webkit-appearance: none;
-        position: absolute;
-        left: 90px;
-        top: 50px;
-    }
-
-    progress#music_progress::-webkit-progress-bar {
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    progress#music_progress::-webkit-progress-value {
-        background-color: #3f55a7;
-        border-radius: 5px;
-    }
-    /*       音量调节大小  */
-
-    progress#voice {
-        width: 200px;
-        height: 5px;
-        -webkit-appearance: none;
-        position: absolute;
-        right: 10px;
-        top: 45px;
-    }
-
-    progress#voice::-webkit-progress-bar {
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    progress#voice::-webkit-progress-value {
-        background-color: #e72568;
-        border-radius: 5px;
-    }
-    /*  音量按钮*/
-
-    span#voice_tb {
-        position: absolute;
-        right: 220px;
-        top: 40%;
-    }
-    div#musicplayer div.tusiji{
-       width: 800px;
-       height: 300px;
-       position: absolute;
-       top: 100px;
-       left: 0;
-       /*opacity: 0.1;*/
-       z-index: 1;
-       display: none;
-    }
-    div#musicplayer div.tusiji img{
-        width: 48%;
-        height: 100%;
-        /*display: inline-block;*/
-    }
-
-    div.songs{
-        width: 800px;
-        height: 350px;
-        /*background: linear-gradient(to right top, deeppink, white);*/
-        background-color: lightseagreen;
-        border-radius:0 0 5px 5px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        z-index: 11;
-        opacity: 0.9;
-    }
-    
-    div.songs span.song{
-        display: inline-block;
-        opacity: 0.9;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 30px;
-        color:darkred;
-        overflow: hidden;
-        cursor: pointer;
-        font-size: 20px;
-        /*font-weight: 600;*/
-    }
-    div.songs span.song:nth-of-type(odd) {
-        background-color:white;
-    }
-    div.songs span.song:nth-of-type(even) {
-        background-color: darkcyan;
-    }
-     
-    div#musicplayer{
-        width: 800px;
-        height: 600px;
-        position: relative;
-        margin: 20px auto;
-    }
-
-/*----------*/
-div.xiaobing{
-    width: 600px;
-    height: 400px;
-    margin: 50px auto;
-    overflow: hidden;
-}
-canvas#donghua{
-    background-color: rgba(255,255,255,1);
-}

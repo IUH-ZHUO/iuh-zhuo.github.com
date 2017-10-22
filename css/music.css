@@ -1,0 +1,252 @@
+* {
+        margin: 0;
+        padding: 0;
+    }
+    /**/
+
+    font-face {
+        font-family: "music-font";
+        src: url('/css/musicPlayerFont/fonts/musicPlayerFont.eot') format("    embedded-opentype"),
+        url('/css/musicPlayerFont/fonts/musicPlayerFont.svg') format("svg"),
+        url('/css/musicPlayerFont/fonts/musicPlayerFont.ttf') format("true-type"),
+        url('/css/musicPlayerFont/fonts/musicPlayerFont.woff') format("woff");
+    }
+
+    [class^="music-"],
+    [class*=" music-"] {
+        font-family: "music-font";
+        font-style: normal;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 25px;
+    }
+    /*整个播放器*/
+
+    section#zshMusic {
+        width: 450px;
+        height: 200px;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: #E0E0E0;
+        font-family: 'consolas','思源黑体';
+    }
+
+    div.musicPlayer {
+        width: 450px;
+        height: 100px;
+        border-top: 20px solid darkred;
+        box-sizing: border-box;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        line-height: 80px;
+        position: relative;
+        overflow: hidden;
+        /*opacity: 0.5;*/
+    }
+    /*控制开关*/
+
+    div#controller {
+        height: 50px;
+        width: 50px;
+        background-color: #ec0202;
+        cursor: pointer;
+        border-radius: 50%;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    div#nextmusic,
+    #prevmusic,
+    #showList,
+    .color,
+    #controller {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        text-align: center;
+        background-color: lightgrey;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    div.musicPlayer i {
+        position: relative;
+        top: 6px;
+    }
+
+    div.musicPlayer img {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        left: 10px;
+        /*border-radius: 50%;*/
+    }
+
+
+    div.mainMsg {
+        height: 100px;
+        width: 450px;
+        position: relative;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    div.mainMsg #email{
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+      display: inline-block;
+      color: lightseagreen;
+      font-weight: 800;
+    }
+    div.mainMsg #email i{
+      color:  lightseagreen;
+      position: relative;
+      top: 5px;
+      left: 2px;
+    }
+    /*音乐列表*/
+
+    div.songList {
+        width: 450px;
+        height: 200px;
+        overflow: hidden;
+        display: none;
+        position: relative;
+        /*border-bottom:20px solid transparent;*/
+        /*border-top:10px solid silver;*/
+    }
+
+    div.songss {
+        position: absolute;
+        z-index: 11;
+        height: 200px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    div.tusiji {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        z-index: 1;
+        opacity: 0.05;
+        display: none;
+    }
+
+    div.tusiji img {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+    }
+    /*音乐名字*/
+
+    span.songName {
+        display: block;
+        width: 450px;
+        height: 30px;
+        text-indent: 1em;
+        line-height: 30px;
+        z-index: 11;
+    }
+
+    span.songName:nth-of-type(odd) {
+        background-color: #f1f1f1;    
+    }
+
+    span.songName:hover {
+        background-color: silver;
+    }
+
+    span.activemusic {
+        opacity: 1;
+        color: red;
+    }
+
+
+    div.progress {
+        display: inline-block;
+        width: 300px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        position: relative;
+        /*overflow: hidden;*/
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        cursor: pointer;
+    }
+
+    div.insidePro {
+        width: 0px;
+        height: 3px;
+        background-color: #ec0202;
+        cursor: pointer;
+    }
+
+    div.proBall {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        border: 4px solid white;
+        border-radius: 11px;
+        background-color: red;
+        position: absolute;
+        left: 0px;
+        top: -4px;
+        z-index: 11;
+    }
+
+
+    div.voice {
+        display: inline-block;
+        border-radius: 3px;
+        width: 100px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        position: absolute;
+        left: 340px;
+        top: 50%;
+        cursor: pointer;
+    }
+
+    div.voice i {
+        position: absolute;
+        left: -28px;
+        top: -12px;
+    }
+
+    div.insideVic {
+        width: 50px;
+        height: 3px;
+        background-color: #ec0202;
+        position: absolute;
+    }
+
+    span#thisSong,
+    #thisVoice,
+    #songTime {
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        left: 10px;
+    }
+
+    span#thisVoice {
+        left: 320px;
+    }
+
+    span#songTime {
+        left: 200px;
+    }

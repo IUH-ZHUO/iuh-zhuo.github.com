@@ -3,20 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width,initial-scale=0.6, minimum-scale=0.6, maximum-scale=0.6, user-scalable=no" />
-    <title>卓爸爸的主页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=0.65, minimum-scale=0.65, maximum-scale=0.65, user-scalable=no" />
+    <title>卓卓卓胜辉的个人主页</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/konva.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/shake.css">
+    <link rel="stylesheet" href="./css/music.css">
+    <link rel="stylesheet" href="./css/weather.css">
     <link rel="stylesheet" href="css/newfonts/style.css">
     <link rel="stylesheet" href="css/weatherFont/style.css">
+    <link rel="stylesheet" href="musicPlayerFont/style.css">
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/player.js"></script>
+    <script src="js/music.js"></script>
 </head>
 
 <body>
@@ -54,24 +56,54 @@
                 </div>
             </div>
             <section id="mycases">
-                <div class="biu">
-                    <div class="biu1">
-                        <div class="cards">
-                            <div class="card"><i class="icon-brand7"></i> <span>天气预报</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>音乐播放器</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>画布小人</span> </div>
-                            <!-- <div class="card"> <i class="icon-brand7"></i><span>case4</span> </div>
-                            <div class="card"><i class="icon-brand7"></i> <span>case5</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>case6</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>case7</span> </div>
-                            <div class="card"><i class="icon-brand7"></i> <span>case8</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>case9</span> </div>
-                            <div class="card"> <i class="icon-brand7"></i><span>case10</span> </div> -->
+                <section class="case1">
+                    <section id="zshMusic">
+                        <div id="musics">
+                            <audio src="music/Be With you.mp3" id="music"></audio>
                         </div>
-                    </div>
-                    <div class="biu2">
-                        <div class="amaz fire">
-                            <div id="myweather">
+                        <div class="musicPlayer">
+                            <img src="music/tp.jpg" alt="">
+                            <div id="prevmusic"><i class=" music-chevron-left"> </i></div>
+                            <div id="controller"><i class="music-media-play"></i></div>
+                            <div id="nextmusic"><i class=" music-chevron-right"></i></div>
+                            <div id="showList"><i class="  music-th-large"></i></div>
+                            <div class="color"><i class="music-pipette"></i></div>
+                        </div>
+                        <div class="mainMsg">
+                            <div class="progress">
+                                <div class="insidePro"></div>
+                                <div class="proBall"></div>
+                            </div>
+                            <div class="voice">
+                                <i class="music-volume-down"></i>
+                                <div class="insideVic"></div>
+                            </div>
+                            <span id="thisSong">Be With You</span>
+                            <span id="songTime">00:00/00:00</span>
+                            <span id="thisVoice"> Vol:50%</span>
+                            <span id="email"><i class="music-archive"></i>zhuohws@foxmail.com</span>
+                        </div>
+                        <div class="songList">
+                            <div class="tusiji">
+                                <img src="music/dou.gif" alt="">
+                                <img src="music/dou.gif" alt="">
+                            </div>
+                            <div class="songss">
+                                <span class="activemusic  songName">Be With you</span>
+                                <span class="songName">Beauty</span>
+                                <span class="songName">Time</span>
+                                <span class="songName">Reign</span>
+                                <span class="songName">survivor</span>
+                                <span class="songName">The Party Troll</span>
+                            </div>
+                        </div>  
+                    </section>
+                    <section class="intro hidden-xs">
+                        
+                    </section>
+                </section>
+                <section class="case2 ">
+                    <div id="myweather" class="col-xs-10">
                                 <div class="tianqi">
                                     <select name="" id="city">
                                         <option value="101010100">北京</option>
@@ -88,78 +120,15 @@
                                     <span id="dayw"></span>
                                     <span id="nightw"></span>
                                 </div>
-                                <div class="fivedays">
+                                <div class="fivedays col-xs-8">
                                     <p>未来五天天气:</p>
                                     <ul id="five"></ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="amaz">
-                            <div id="musicplayer">
-                                <div id="aaa">
-                                    <audio src="./music/Be With you.mp3" id="music"></audio>
-                                </div>
-                                <div id="controller">
-                                    <div id="paly">
-                                        <a href="javascript:;" id="play_pause_btn">
-                <img src="music/tp.jpg" alt=""></a>
-                                    </div>
-                                    <div id="meg">
-                                        <span id="music_name"></span>
-                                        <span id="music_time"></span>
-                                    </div>
-                                    <div id="progresscontrol">
-                                        <progress id="music_progress" value="0" max="100"></progress>
-                                        <span id="voice_tb">Vol:50%</span>
-                                        <progress id="voice" value="50" max="100"></progress>
-                                    </div>
-                                </div>
-                                <div class="songs">
-                                    <span class="song">Be With you</span>
-                                    <span class="song">Beauty</span>
-                                    <span class="song">The Party Troll</span>
-                                    <span class="song">Reign</span>
-                                    <span class="song">Time</span>
-                                    <span class="song">Survivor</span>
-                                </div>
-                                <div class="tusiji">
-                                    <img src="music/dou.gif" alt="">
-                                    <img src="music/dou.gif" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="amaz">
-                            <div class="xiaobing">
-                     <button data-target="up">上</button>
-                    <button data-target="down">下</button>
-                    <button data-target="left">左</button>
-                    <button data-target="right">右</button>
-                    <canvas id="donghua" width="600" height="400" ></canvas>
                     </div>
-                        </div>
-                       <!--  <div class="amaz">4</div>
-                        <div class="amaz">5</div>
-                        <div class="amaz">6</div>
-                        <div class="amaz">7</div>
-                        <div class="amaz">8</div>
-                        <div class="amaz">9</div>
-                        <div class="amaz">10</div> -->
-                    </div>
-                </div>
-                </div>
-                <div class="spanss taccenter">
-                    <!-- <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span> -->
-                    <span class="leftshow" id="prevPage"><i class="icon-brand18 shake"></i></span>
-                    <span class="leftshow" id="random"><i class="icon-brand40"></i></span>
-                    <span class="leftshow" id="nextPage"><i class="icon-brand18 shake"></i></span>
-                    <!-- <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>  
-                    <span class="leftshow" ><i class="icon-brand18 shake"></i></span>   -->
-                </div>
+                    <section class="intro2 hidden-xs">
+                        
+                    </section>
+                </section>
             </section>
         </section>
         <section id="middleDown">
@@ -201,5 +170,6 @@
     <span id="backToTop">返回顶部</span>
 </body>
 <script src="js/weather.js"></script>
-<script src="js/donghua.js"></script>
+<!-- <script src="js/donghua.js"></script> -->
+
 </html>
