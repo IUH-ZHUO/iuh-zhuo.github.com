@@ -206,6 +206,7 @@ section#middleDown {
     width: 100%;
     height: 600px;
     background-color: transparent;
+    display: none;
 }
 
 section.picCase {
@@ -266,6 +267,7 @@ section#bottom {
     /*opacity: 0.9;*/
     color: white;
     font-family: '思源黑体';
+
 }
 
 section#bottom span.personal,
@@ -531,6 +533,7 @@ section#middle section#mycases section.case1 div.clock {
     margin-top: -150px;
     left: 50%;
     margin-left: -70px;
+
     /*margin: 0 auto;*/
 }
 
@@ -547,6 +550,7 @@ section#middle section#mycases section.case2 {
     background-color: teal;
     /*background: url('../images/777.jpg')bottom center no-repeat ;*/
     position: relative;
+    display: none;
 }
 
 section#middle section#mycases section.case2 div#round {

@@ -193,6 +193,9 @@ $(function() {
         }
         },150);
 
+        $('section.case2').fadeIn();
+        $('section#middleDown').fadeIn();
+
 })
 
 
