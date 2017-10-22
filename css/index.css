@@ -5,7 +5,9 @@
 
 body {
     background-color: lightseagreen;
-    background: url('../images/33.jpg')bottom center no-repeat fixed;
+    background: url('../images/33.jpg')bottom center fixed;
+    /*background-size: 100vw ,auto;*/
+    background-repeat: 
     font-family: 'segoe script', '思源黑体';
 }
 
