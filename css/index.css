@@ -70,6 +70,8 @@ section#all {
     position: relative;
     overflow: hidden;
     width: 100%;
+    background-color:darkcyan;
+    background: url('../images/33.jpg')bottom center fixed;
 }
 
 
@@ -294,7 +296,7 @@ section#intouch {
     height: 400px;
     position: absolute;
     right: 0;
-    top: 200px;
+    top: 250px;
     overflow: hidden;
     font-family: 'segoe ui';
     z-index: 12;

@@ -8,7 +8,7 @@
     var colorList = ['#ec0202','lightseagreen', 'darkblue', 'orangered', 'darkcyan', 'silver'];
     var colorIndex = 0;
     $('div.color').click(function() {
-        if (colorIndex > colorList.length) {
+        if (colorIndex > colorList.length-2) {
             colorIndex = -1;
         }
         colorIndex += 1;
