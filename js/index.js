@@ -3,49 +3,49 @@ $(function() {
 
     // -------------------------via------------------------
 
-    var viaImg = document.getElementById("viaImg");
+    // var viaImg = document.getElementById("viaImg");
 
-    var stage = new Konva.Stage({
-        container: 'via',
-        width: 100,
-        height: 100
-    });
-    var layer2 = new Konva.Layer({});
-    stage.add(layer2);
-    var data = [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125];
-    var colors = ['rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.7)', 'rgba(255,255,255,1)'];
-    var startAngle = -90;
-    // console.log(colors[1]);
-    data.forEach(function(v, i) {
-        var wedge = new Konva.Wedge({
-            x: 50,
-            y: 50,
-            radius: 50,
-            angle: 360 * v,
-            rotation: startAngle,
-            fill: colors[i],
-            draggable: true
-        });
-        startAngle += 360 * v;
+    // var stage = new Konva.Stage({
+    //     container: 'via',
+    //     width: 100,
+    //     height: 100
+    // });
+    // var layer2 = new Konva.Layer({});
+    // stage.add(layer2);
+    // var data = [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125];
+    // var colors = ['rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.95)', 'rgba(255,255,255,1)', 'rgba(255,255,255,0.7)', 'rgba(255,255,255,1)'];
+    // var startAngle = -90;
+    // // console.log(colors[1]);
+    // data.forEach(function(v, i) {
+    //     var wedge = new Konva.Wedge({
+    //         x: 50,
+    //         y: 50,
+    //         radius: 50,
+    //         angle: 360 * v,
+    //         rotation: startAngle,
+    //         fill: colors[i],
+    //         draggable: true
+    //     });
+    //     startAngle += 360 * v;
 
-        layer2.add(wedge);
-        viaImg.onmouseenter = function() {
-            wedge.parent.children.forEach(function(v, i) {
-                if (i % 2) {
-                    v.to({
-                        rotation: -720 + v.attrs.rotation,
-                        duration: 2
-                    });
-                } else {
-                    v.to({
-                        rotation: 720 + v.attrs.rotation,
-                        duration: 2
-                    });
-                }
-            })
-        }
-    });
-    layer2.draw();
+    //     layer2.add(wedge);
+    //     viaImg.onmouseenter = function() {
+    //         wedge.parent.children.forEach(function(v, i) {
+    //             if (i % 2) {
+    //                 v.to({
+    //                     rotation: -720 + v.attrs.rotation,
+    //                     duration: 2
+    //                 });
+    //             } else {
+    //                 v.to({
+    //                     rotation: 720 + v.attrs.rotation,
+    //                     duration: 2
+    //                 });
+    //             }
+    //         })
+    //     }
+    // });
+    // layer2.draw();
 
     // div -hello
     setTimeout(function() {
