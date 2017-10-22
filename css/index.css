@@ -556,7 +556,7 @@ section#middle section#mycases section.case2 {
 section#middle section#mycases section.case2 div#round {
     width: 300px;
     height: 300px;
-    background-color: lightseagreen;
+    background-color:#EE6363;
     position: relative;
 }
 
@@ -566,7 +566,7 @@ section#middle section#mycases section.case2 div.clear {
     position: absolute;
     left: 100px;
     top: 100px;
-    background-color: lightseagreen;
+    background-color:#EE6363;
     z-index: 11;
     border-radius: 50%;
 }
