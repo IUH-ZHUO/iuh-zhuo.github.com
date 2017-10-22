@@ -178,19 +178,19 @@
 
 
     $('.progress').click(function(e) {
-        var left = $(this)[0].offsetLeft;
+        var left = $(this)[0].offsetLeft+$('#zshMusic')[0].offsetLeft;
         var leftP = e.pageX;
         var rong = parseInt(leftP - left) / parseInt($(this).css('width'));
         changeMusicTime(music, rong);
     });
 
     $('.voice').click(function(e) {
-        var left2 = $(this)[0].offsetLeft;
-        var leftP2 = e.pageX;
+        var left2 = $(this)[0].offsetLeft+$('#zshMusic')[0].offsetLeft;
+        var leftP2 = e.pageX;     
         var rong2 = (parseInt(leftP2 - left2)) / parseInt(($(this).css('width')));
-        // console.log(rong2);
         changeMusicVolume(music, rong2);
-        $('.insideVic').css({ 'width': parseInt(musicData(music)[5] * 100) });
+        // console.log(rong2/4);
+        $('.insideVic').css({ 'width': parseInt(musicData(music)[5] * 100)});
         showVoice(musicData(music)[5]);
     });
 
