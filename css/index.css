@@ -19,6 +19,7 @@ body {
 }
 
 
+
 /*返回顶部*/
 
 span#backToTop {
@@ -34,6 +35,7 @@ span#backToTop {
     right: 10px;
     cursor: pointer;
 }
+
 
 
 /*--------------------添加本地字体---------------*/
@@ -58,6 +60,7 @@ span#backToTop {
 
 
 
+
 /*整体*/
 
 section#all {
@@ -66,6 +69,7 @@ section#all {
     overflow: hidden;
     width: 100%;
 }
+
 
 
 
@@ -134,6 +138,7 @@ div.hello {
 }
 
 
+
 /*------------------------------头像-------------------*/
 
 div#mainvia {
@@ -191,6 +196,7 @@ div#vias img {
 }
 
 
+
 /*---------------------*/
 
 
@@ -246,6 +252,7 @@ section#middleDown div.pic img {
 
 
 
+
 /*-------------------------
 
 
@@ -275,6 +282,7 @@ span.ancle {
 
 
 
+
 /*---------------------------------------侧边联系栏----------------------*/
 
 section#intouch {
@@ -290,6 +298,7 @@ section#intouch {
 
 
 
+
 /*图标*/
 
 div#mine {
@@ -302,6 +311,7 @@ div#mine {
 }
 
 
+
 /*点击按钮*/
 
 div#mine>span#showbtn {
@@ -312,6 +322,7 @@ div#mine>span#showbtn {
     border-radius: 10px;
     border: 1px solid #666;
 }
+
 
 
 /*五个小图标*/
@@ -333,6 +344,7 @@ section#intouch div.ball span {
     font-size: 16px;
     color: #fff;
 }
+
 
 
 
@@ -413,6 +425,7 @@ div#me>div.active {
 }
 
 
+
 /*-----------------------------------------------------------*/
 
 
@@ -471,7 +484,7 @@ section#middle section#mycases section.case1 section.intro {
     position: relative;
 }
 
-canvas#clock{
+canvas#clock {
     position: relative;
     left: 20px;
     top: -10px;
@@ -484,7 +497,7 @@ section#middle div.rili {
     width: 140px;
     height: 160px;
     font-family: "consolas";
-    background-color:darkcyan;
+    background-color: darkcyan;
     border-radius: 5px;
 }
 
@@ -536,10 +549,50 @@ section#middle section#mycases section.case2 {
     position: relative;
 }
 
+section#middle section#mycases section.case2 div#round {
+    width: 300px;
+    height: 300px;
+    background-color: lightseagreen;
+    position: relative;
+}
+
+section#middle section#mycases section.case2 div.clear {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    background-color: lightseagreen;
+    z-index: 11;
+    border-radius: 50%;
+}
+
+section#middle section#mycases section.case2 div.axiba {
+    width: 3px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    z-index: 1;
+    border-radius: 6px;
+}
+section#middle section#mycases section.case2 div#round i{
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    top: 50%;
+    z-index: 111;
+}
+
+
+
 section#middle section#mycases section.case2 section.intro2 {
     height: 300px;
     width: 300px;
-    background-color: lightgrey;
+    background-color: lightseagreen;
     position: absolute;
     right: 0;
     top: 0;

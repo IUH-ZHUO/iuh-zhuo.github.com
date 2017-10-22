@@ -5,11 +5,11 @@
     var musicList = ['Be With you', 'Beauty', 'Time', 'Reign', 'survivor', 'The Party Troll'];
 
     //换主题颜色
-    var colorList = ['#ec0202','lightseagreen', 'darkblue', 'darkred', 'darkcyan', 'silver'];
-    var colorIndex = -1;;
+    var colorList = ['#ec0202','lightseagreen', 'darkblue', 'orangered', 'darkcyan', 'silver'];
+    var colorIndex = 0;
     $('div.color').click(function() {
         if (colorIndex > colorList.length) {
-            colorIndex = 0;
+            colorIndex = -1;
         }
         colorIndex += 1;
         $(this).find('i').css({ 'color': colorList[colorIndex] });

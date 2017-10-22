@@ -1,4 +1,4 @@
-window.onload = function() {
+$(function() {
 
 
     // -------------------------via------------------------
@@ -169,10 +169,31 @@ window.onload = function() {
             $(this).fadeToggle();
         })
     })
+     
+     // var colorDatas=['deeppink','seagreen','darkblue','orange','brown','skublue','deeppink','seagreen','darkblue','orange','brown','skublue']
+     var round =document.getElementById('round');
+        var axiba =document.getElementsByClassName('axiba');
+        var deg=0;
+        var opa = 0.4;
+        var timer11 =setInterval(function(){
+        var axiba2 =document.createElement('div');
+        axiba2.className='axiba'; 
+        round.appendChild(axiba2);
+        deg+=30;
+        opa+=0.05;
+        axiba2.style.transform='rotate('+deg+'deg)';
+        axiba2.style.opacity=opa;
+        // axiba2.style.backgroundColor=colorDatas[deg/30-1];
+        var axibaLen=axiba.length;
+        var data=[1,2,3];
+        if(axiba.length>12){
+            deg=0;
+            opa=0.4;
+            $('div').remove('.axiba');
+        }
+        },150);
 
-
-
-}
+})
 
 
 //---------------------------------------------
