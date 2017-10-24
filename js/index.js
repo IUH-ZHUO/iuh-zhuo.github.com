@@ -105,6 +105,13 @@ $(function() {
             top: y
         };
     }
+
+    window.onscroll=function(){
+        if(scroll().top>900){
+            // console.log(1);
+            $('#middleDown').fadeIn();
+        }
+    }
     // 上下移动屏幕函数 :当前值　／目标值
     var moveTimer;  
     function moveTo(current, target) {　　

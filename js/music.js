@@ -2,7 +2,7 @@
 
 
  var music = document.getElementById('music');
-    var musicList = ['Beauty', 'Beauty', 'Beauty', 'Beauty', 'Beauty', 'Beauty'];
+    var musicList = ['Be With you', 'Beauty', 'Time', 'Reign', 'survivor', 'The Party Troll'];
 
     //换主题颜色
     var colorList = ['#ec0202','lightseagreen', 'darkblue', 'orangered', 'darkcyan', 'silver'];
@@ -97,12 +97,12 @@
     var musicControl = function(music) {
         if (music.paused) {
             music.play();
-            $('.tusiji').fadeIn();
-            $("#controller").find('i')[0].className = 'music-media-pause';
+            // $('.tusiji').fadeIn();
+            // $("#controller").find('i')[0].className = 'music-media-pause';
         } else {
             music.pause();
-            $('.tusiji').fadeOut();
-            $("#controller").find('i')[0].className = 'music-media-play';
+            // $('.tusiji').fadeOut();
+            // $("#controller").find('i')[0].className = 'music-media-play';
         }
 
     }
@@ -200,6 +200,7 @@
         $('.insidePro').css({ 'width': parseInt(musicData(music)[4] * 300) });
         $('.proBall').css({ 'left': parseInt(musicData(music)[4] * 300) });
         showMusicTime(musicData(music));
+        
         if (music.ended) {
             console.log('end=>next');
             zsh += 1;
@@ -207,6 +208,15 @@
                 zsh = 0;
             }
             changeMusic(zsh);
+            music.play();
+        }
+        if (music.paused) {
+            $('.tusiji').fadeOut();
+            $("#controller").find('i')[0].className = 'music-media-play';
+            } else {
+            $('.tusiji').fadeIn();
+            $("#controller").find('i')[0].className = 'music-media-pause';
+            // music.play();
         }
         // console.log(musicData(music)[4]*300);
     }, 500);
