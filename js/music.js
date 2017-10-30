@@ -83,7 +83,7 @@
         $('#musics').empty();
         $('#musics').html('<audio src=" music/' + musicList[index] + '.mp3 " id="music"></audio>');
         music = document.getElementById("music");
-        music.play();
+        // music.play();
         changeMusicName(index);
     }
 

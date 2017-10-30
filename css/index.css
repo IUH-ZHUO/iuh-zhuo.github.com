@@ -208,7 +208,8 @@ div#vias img {
 section#middleDown {
     width: 100%;
     height: 600px;
-    background-color: transparent;
+    background-color:#2F4F4F; 
+    opacity: 1;
     display: none;
 }
 
@@ -216,7 +217,6 @@ section.picCase {
     width: 100%;
     height: 100%;
     /*background-color:white;*/
-    opacity: 0.6;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -227,16 +227,20 @@ section.picCase {
 section#middleDown div.pic {
     width: 22%;
     height: 40%;
-    background-color: #222;
+    background-color:#668B8B;
+    opacity: 0.9;
     position: relative;
     text-align: center;
     font-size: 20px;
     color: white;
+    /*overflow: hidden;*/
+    /*border-radius: 10px;*/
     /*display: none;*/
 }
 
-section#middleDown div.pic:hover span.picIto {
+section#middleDown div.pic span.picIto{
     display: inline-block;
+
 }
 
 section#middleDown div.pic span.picIto {
@@ -247,8 +251,27 @@ section#middleDown div.pic span.picIto {
 }
 
 section#middleDown div.pic img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
+    margin: 9% auto;
+}
+@keyframes lefter{
+    0%{left:0;}
+    20%{left:0;}
+    50%{left:25%;}
+    100%{left:25%;}
+}
+@keyframes righter{
+    0%{left:0;}
+    20%{left:0;}
+    50%{left:-25%;}
+    100%{left:-25%;}
+}
+div.pic:nth-of-type(odd){
+    animation: lefter 8s infinite 5s alternate ease-in-out;
+}
+div.pic:nth-of-type(even){
+    animation: righter 8s infinite 5s alternate ease-in-out;
 }
 
 

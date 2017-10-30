@@ -1,5 +1,5 @@
 $(function() {
-
+    $('#middleDown').css({display:'none'});
 
     // -------------------------via------------------------
 
@@ -108,8 +108,8 @@ $(function() {
 
     window.onscroll=function(){
         if(scroll().top>900){
-            // console.log(1);
-            $('#middleDown').fadeIn();
+            console.log(1);
+            $('#middleDown').css({display:'block'});
         }
     }
     // 上下移动屏幕函数 :当前值　／目标值
@@ -201,7 +201,8 @@ $(function() {
         },150);
 
         $('section.case2').fadeIn();
-        $('section#middleDown').fadeIn();
+        // $('section#middleDown').fadeIn()     
+    
 
 })
 
