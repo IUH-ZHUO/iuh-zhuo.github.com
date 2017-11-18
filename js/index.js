@@ -1,5 +1,6 @@
 $(function() {
-    $('#middleDown').css({display:'none'});
+    // $('#middleDown').css({ display: 'none' });
+
 
     // -------------------------via------------------------
 
@@ -61,24 +62,25 @@ $(function() {
     // 点击到下一层
     $("span#morecases").click(function() {
         var thatTop = parseInt($('#topBar').css('height'));
-        moveTo(0, thatTop+10);
+        moveTo(0, thatTop + 10);
 
     });
-    function diandian(){
+
+    function diandian() {
         // console.log(this);
         $("span#morecases").animate({
-            'bottom':'80'
-        },500,function(){
+            'bottom': '80'
+        }, 500, function() {
             $('span.water1').fadeOut();
             $("span#morecases").animate({
-            'bottom':'100'
-        },300)
+                'bottom': '100'
+            }, 300)
         });
         $('span.water1').fadeIn();
     }
-    setTimeout(function(){ 
-    diandian();
-    },1000);
+    setTimeout(function() {
+        diandian();
+    }, 1000);
 
 
     // 点击返回顶部栏
@@ -105,15 +107,39 @@ $(function() {
             top: y
         };
     }
+    // var timer11;
+    // window.onscroll = function() {
+        // if (scroll().top = 900) {
+            // console.log(1);
+            // $('#middleDown').css({ display: 'block' });
+            // $('#middleDown').trigger('click');
+        // }
+    // }
 
-    window.onscroll=function(){
-        if(scroll().top>900){
-            console.log(1);
-            $('#middleDown').css({display:'block'});
-        }
-    }
+
+    // $('#middleDown').click(function() {
+        // $('.con').each(function(index) {
+        //     $(this).css({
+        //         'left': index * parseInt($(this).css('width'))
+        //     });
+        // });
+        // var timer11 = setInterval(function() {
+            $('#middleDown').click(function(){
+                $('.con').each(function(index) {
+                if ($(this).css('display') ==='none') {
+                   $(this).css({'display':'flex'});
+                } else {
+                  $(this).css({'display':'none'});
+                }
+            })
+            })
+            
+        // }, 80);
+    // })
+    
     // 上下移动屏幕函数 :当前值　／目标值
-    var moveTimer;  
+    var moveTimer;
+
     function moveTo(current, target) {　　
         clearInterval(moveTimer);　
         moveTimer = setInterval(function() {
@@ -140,7 +166,7 @@ $(function() {
 
     // 
 
-   
+
 
     // 联系栏
 
@@ -176,33 +202,33 @@ $(function() {
             $(this).fadeToggle();
         })
     })
-     
-     // var colorDatas=['deeppink','seagreen','darkblue','orange','brown','skublue','deeppink','seagreen','darkblue','orange','brown','skublue']
-     var round =document.getElementById('round');
-        var axiba =document.getElementsByClassName('axiba');
-        var deg=0;
-        var opa = 0.4;
-        var timer11 =setInterval(function(){
-        var axiba2 =document.createElement('div');
-        axiba2.className='axiba'; 
+
+    // var colorDatas=['deeppink','seagreen','darkblue','orange','brown','skublue','deeppink','seagreen','darkblue','orange','brown','skublue']
+    var round = document.getElementById('round');
+    var axiba = document.getElementsByClassName('axiba');
+    var deg = 0;
+    var opa = 0.4;
+    var timer11 = setInterval(function() {
+        var axiba2 = document.createElement('div');
+        axiba2.className = 'axiba';
         round.appendChild(axiba2);
-        deg+=30;
-        opa+=0.05;
-        axiba2.style.transform='rotate('+deg+'deg)';
-        axiba2.style.opacity=opa;
+        deg += 30;
+        opa += 0.05;
+        axiba2.style.transform = 'rotate(' + deg + 'deg)';
+        axiba2.style.opacity = opa;
         // axiba2.style.backgroundColor=colorDatas[deg/30-1];
-        var axibaLen=axiba.length;
-        var data=[1,2,3];
-        if(axiba.length>12){
-            deg=0;
-            opa=0.4;
+        var axibaLen = axiba.length;
+        var data = [1, 2, 3];
+        if (axiba.length > 12) {
+            deg = 0;
+            opa = 0.4;
             $('div').remove('.axiba');
         }
-        },150);
+    }, 150);
 
-        $('section.case2').fadeIn();
-        // $('section#middleDown').fadeIn()     
-    
+    $('section.case2').fadeIn();
+    // $('section#middleDown').fadeIn()     
+
 
 })
 

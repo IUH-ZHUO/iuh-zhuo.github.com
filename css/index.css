@@ -5,6 +5,8 @@
 
 body {
     background-color: lightseagreen;
+    background: url('../images/33.jpg')bottom center fixed;
+    min-width: 1100px;
     /*background: url('../images/33.jpg');*/
     /*background-size: 100vw ,auto;*/
     font-family: 'segoe script', '思源黑体';
@@ -18,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 
 
 
@@ -36,6 +39,7 @@ span#backToTop {
     right: 10px;
     cursor: pointer;
 }
+
 
 
 
@@ -62,6 +66,7 @@ span#backToTop {
 
 
 
+
 /*整体*/
 
 section#all {
@@ -69,9 +74,15 @@ section#all {
     position: relative;
     overflow: hidden;
     width: 100%;
-    background-color:darkcyan;
-    background: url('../images/33.jpg')bottom center fixed;
+    /*min-width: 1100px;*/
+    /*background-color:darkcyan;*/
 }
+
+section#all section {
+    /*width: 90%;*/
+    /*margin:0px auto;*/
+}
+
 
 
 
@@ -142,6 +153,7 @@ div.hello {
 
 
 
+
 /*------------------------------头像-------------------*/
 
 div#mainvia {
@@ -200,6 +212,7 @@ div#vias img {
 
 
 
+
 /*---------------------*/
 
 
@@ -207,23 +220,87 @@ div#vias img {
 
 section#middleDown {
     width: 100%;
-    height: 600px;
-    background-color:#2F4F4F; 
-    opacity: 1;
-    display: none;
+    height: 360px;
+    background-color: #111;
+    opacity: 0.7;
+    display: block;
 }
 
 section.picCase {
     width: 100%;
     height: 100%;
+    position: relative;
     /*background-color:white;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
+    /*flex-wrap: wrap;*/
 }
 
+section div.con {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    transition: all 2s linear;
+}
+
+section div.con:nth-of-type(2) {
+    display: none;
+}
+
+div.con div.pic span {
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    left: 0;
+    bottom: -60px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #ddd,
+    0 0 20px #ddd,
+    0 0 30px #ddd;
+}
+
+section div.con div.pic {
+    /*overflow: hidden;*/
+    text-align: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px #ddd,
+    0 0 20px #ddd;
+}
+
+section div.con div.pic:hover{
+    box-shadow: 0 0 10px #ddd,
+    0 0 20px #ddd,
+    0 0 30px #ddd,
+    0 0 40px #ddd;
+}
+
+section div.con div.pic img {
+    width: 100%;
+    height: 100%;
+    /*border-radius: 20px;*/
+    transition: all 2s;
+    transform: scale(1, 1);
+}
+
+section div.con div.pic img:hover {
+    /*transform: scale(1.05,1.05);*/
+    transition: all 2s;
+}
+
+
+/*
 section#middleDown div.pic {
     width: 22%;
     height: 40%;
@@ -233,22 +310,12 @@ section#middleDown div.pic {
     text-align: center;
     font-size: 20px;
     color: white;
-    /*overflow: hidden;*/
-    /*border-radius: 10px;*/
-    /*display: none;*/
 }
 
 section#middleDown div.pic span.picIto{
     display: inline-block;
-
 }
 
-section#middleDown div.pic span.picIto {
-    /*position: absolute;*/
-    /*top: 40%;*/
-    /*left: 40%;*/
-    /*display: none;*/
-}
 
 section#middleDown div.pic img {
     width: 80%;
@@ -272,13 +339,7 @@ div.pic:nth-of-type(odd){
 }
 div.pic:nth-of-type(even){
     animation: righter 8s infinite 5s alternate ease-in-out;
-}
-
-
-
-
-
-
+}*/
 
 
 /*-------------------------
@@ -289,13 +350,12 @@ div.pic:nth-of-type(even){
 section#bottom {
     height: 100px;
     /*background-color: #102139;*/
-    background-color: #484848;
-    opacity: 0.5;
+    background-color: #333;
+    opacity: 0.9;
     /*opacity: 0.9;*/
     color: white;
     font-family: '思源黑体';
     margin-top: 50px;
-
 }
 
 section#bottom span.personal,
@@ -306,6 +366,7 @@ span.ancle {
     padding: 15px;
     font-size: 16px;
 }
+
 
 
 
@@ -329,6 +390,7 @@ section#intouch {
 
 
 
+
 /*图标*/
 
 div#mine {
@@ -342,6 +404,7 @@ div#mine {
 
 
 
+
 /*点击按钮*/
 
 div#mine>span#showbtn {
@@ -352,6 +415,7 @@ div#mine>span#showbtn {
     border-radius: 10px;
     border: 1px solid #666;
 }
+
 
 
 
@@ -374,6 +438,7 @@ section#intouch div.ball span {
     font-size: 16px;
     color: #fff;
 }
+
 
 
 
@@ -453,6 +518,7 @@ div#me>div.five span.telNum,
 div#me>div.active {
     display: block;
 }
+
 
 
 
@@ -584,7 +650,7 @@ section#middle section#mycases section.case2 {
 section#middle section#mycases section.case2 div#round {
     width: 300px;
     height: 300px;
-    background-color:#EE6363;
+    background-color: #EE6363;
     position: relative;
 }
 
@@ -594,7 +660,7 @@ section#middle section#mycases section.case2 div.clear {
     position: absolute;
     left: 100px;
     top: 100px;
-    background-color:#EE6363;
+    background-color: #EE6363;
     z-index: 11;
     border-radius: 50%;
 }
@@ -609,7 +675,8 @@ section#middle section#mycases section.case2 div.axiba {
     z-index: 1;
     border-radius: 6px;
 }
-section#middle section#mycases section.case2 div#round i{
+
+section#middle section#mycases section.case2 div#round i {
     font-size: 40px;
     position: absolute;
     left: 50%;
