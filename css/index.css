@@ -5,9 +5,8 @@
 
 body {
     background-color: lightseagreen;
-    background: url('../images/33.jpg')bottom center fixed;
-    background:linear-gradient(to right bottom,darkcyan,lightseagreen );
     min-width: 1100px;
+    background:linear-gradient(to right bottom,darkcyan,lightseagreen);
     /*background: url('../images/33.jpg');*/
     /*background-size: 100vw ,auto;*/
     font-family: 'segoe script', '思源黑体';
@@ -75,6 +74,7 @@ section#all {
     position: relative;
     overflow: hidden;
     width: 100%;
+    background: url('../images/33.jpg')bottom center fixed;
     /*min-width: 1100px;*/
     /*background-color:darkcyan;*/
 }
