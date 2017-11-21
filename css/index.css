@@ -6,7 +6,7 @@
 body {
     background-color: lightseagreen;
     background: url('../images/33.jpg')bottom center fixed;
-    /*background:linear-gradient(to right bottom, deepskyblue ,skyblue);*/
+    background:linear-gradient(to right bottom,darkcyan,lightseagreen );
     min-width: 1100px;
     /*background: url('../images/33.jpg');*/
     /*background-size: 100vw ,auto;*/
