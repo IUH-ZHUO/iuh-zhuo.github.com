@@ -182,6 +182,8 @@ $(function() {
             boxArr[i].index = i;
             boxArr[i].onclick = function() {
                 var that = this.index;
+                $('.ball').css({'backgroundColor':'transparent'});
+                $(this).css({'backgroundColor':'teal'});
                 for (var j = 0; j < fives.length; j++) {
                     fives[j].style.display = 'none';
                     fives[that].style.display = 'block';

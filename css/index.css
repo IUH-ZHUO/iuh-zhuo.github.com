@@ -6,6 +6,7 @@
 body {
     background-color: lightseagreen;
     background: url('../images/33.jpg')bottom center fixed;
+    /*background:linear-gradient(to right bottom, deepskyblue ,skyblue);*/
     min-width: 1100px;
     /*background: url('../images/33.jpg');*/
     /*background-size: 100vw ,auto;*/
@@ -366,6 +367,10 @@ span.ancle {
     padding: 15px;
     font-size: 16px;
 }
+span.ancle i{
+    font-size: 22px;
+    text-shadow: 0 0 5px #fff,0 0 10px #fff;
+}
 
 
 
@@ -381,7 +386,7 @@ section#intouch {
     height: 400px;
     position: absolute;
     right: 0;
-    top: 250px;
+    top: 100px;
     overflow: hidden;
     font-family: 'segoe ui';
     z-index: 12;
@@ -407,13 +412,15 @@ div#mine {
 
 /*点击按钮*/
 
-div#mine>span#showbtn {
+div#mine>span#showbtn{
     width: 40px;
     height: 40px;
     font-size: 30px;
     cursor: pointer;
     border-radius: 10px;
-    border: 1px solid #666;
+    border: 1px solid #444;
+    background-color: orangered;
+    /*color: #fff;*/
 }
 
 
@@ -430,9 +437,16 @@ section#intouch div.ball {
     text-align: center;
     display: none;
     cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+section#intouch div.ball:nth-of-type(1){
+    background-color: teal;
 }
 
-section#intouch div.ball span {
+
+section#intouch div.ball span{
+    display: block;
     width: 100%;
     height: 100%;
     font-size: 16px;
@@ -489,7 +503,11 @@ div#me>div.five {
     color: white;
     display: none;
     text-align: left;
+    /*border:1px solid #fff;*/
+    background-color: #333;
+    opacity: 0.5;
 }
+
 
 div#me>div#tele {
     padding: 20px;
