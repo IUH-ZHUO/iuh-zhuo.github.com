@@ -2,7 +2,7 @@
 
 
  var music = document.getElementById('music');
-    var musicList = ['Be With you', 'Beauty', 'Time', 'Reign', 'survivor', 'The Party Troll'];
+    var musicList = ['活着', '活着', '活着', '活着', '活着'];
 
     //换主题颜色
     var colorList = ['#ec0202','lightseagreen', 'darkblue', 'orangered', 'darkcyan', 'silver'];
